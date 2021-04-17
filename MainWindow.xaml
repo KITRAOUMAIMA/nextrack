@@ -22,13 +22,17 @@
             <ColumnDefinition Width="117*"/>
             <ColumnDefinition Width="283*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btn" Background="#FFE81515" Grid.Column="1"  BorderThickness="0" Margin="307,87,227,227" Grid.Row="1">
+        <Button x:Name="btn"   Background="#FFE81515" Grid.Column="1"  BorderThickness="0" Margin="317,77,213,237" Grid.Row="1">
             <Button.Content>
-                <Border CornerRadius="7" Height="67" Width="464" BorderThickness="4,4,4,4"  Background="#FFE42340">
+                <Border CornerRadius="7" Height="65" Width="453" BorderThickness="4,4,4,4"  Background="#FFE42340">
+                    <Label FontSize="25" Content="                     S'authentifier" Foreground="White" HorizontalAlignment="Left" Width="443" Margin="6,-2,0,3"/>
                 </Border>
+
+
+
             </Button.Content>
         </Button>
-        <TextBlock Text="LOGIN" TextWrapping="Wrap" RenderTransformOrigin="0,0.5" Margin="147,236,516,-149" Background="#FFD9D9D9" Foreground="#FFB1B0B0" FontSize="100" TextAlignment="Center" Grid.ColumnSpan="2" FontStretch="Medium" FontWeight="SemiBold" Grid.Row="1">
+        <TextBlock Text="LOGIN" TextWrapping="Wrap" RenderTransformOrigin="0,0.5" Margin="147,236,516,-149" Background="#FFD9D9D9" Foreground="#FFB1B0B0" FontSize="100" TextAlignment="Center" Grid.ColumnSpan="2" FontStretch="Medium" FontWeight="Bold" Grid.Row="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -38,40 +42,43 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <!-- <PasswordBox Margin="348,225,114,168" Grid.Column="1"/>-->
-        <DockPanel Margin="310,363,226,330" Background="White" Grid.RowSpan="2" Grid.Column="1">
-            <Border CornerRadius="10">
-            </Border>
-            <Image Source="images/login_pwd.png" Grid.Column="1"  Height="40" Width="54"/>
-            <!--<PasswordBox Width="282"  Height="88"/>-->
-            <PasswordBox Width="407"  Height="52"/>
-            <StackPanel Orientation="Horizontal" Width="411" Height="51"/>
-        </DockPanel>
         <Image Source="images/nextrack_logo.png" Grid.Column="1" Margin="386,112,322,154"/>
-
+        <Image Source="images/closebtn.png" Grid.Column="1" Margin="947,-2,-2,315" RenderTransformOrigin="-0.021,1.361"/>
         <!-- <TextBlock TextWrapping="Wrap" Margin="304,226,494,168" Grid.Column="1" Background="White">
             <InlineUIContainer>
                 <Image Source="images/login_user.png" Grid.Column="1"  Height="40" Width="54"/>  
             </InlineUIContainer>
-          
         </TextBlock>-->
-
         <!-- <TextBox TextWrapping="Wrap" Grid.Column="1" Margin="348,150,114,241" TextChanged="TextBox_TextChanged"/>-->
-        <DockPanel Grid.Column="1" Margin="308,249,229,61" Background="White">
-            <Image Source="images/login_user.png" Grid.Column="1"  Height="40" Width="54"/>
-            <StackPanel Orientation="Horizontal" Width="409">
-                <TextBox TextWrapping="Wrap"  TextChanged="TextBox_TextChanged" Width="406" Height="56" RenderTransformOrigin="0.5,0.5">
-                    <TextBox.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
+        <DockPanel Margin="318,254,227,42" Grid.Column="1">
+            <Border CornerRadius="7"
+                Background="White"
+                BorderThickness="0"
+                Padding="8" Height="69" Width="457">
+                <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Top"
+                    Height="45" Margin="0,4,-3,4">
+                    <!--<TextBlock FontSize="14" Padding="0 0 8 0" Height="45">-->
+                    <Image Source="images/login_user.png" Grid.Column="1"  Height="41" Width="54"/>
+                    <!--</TextBlock>-->
+                    <TextBox x:Name="txtSearchTerm" Width="385" Height="37" TextChanged="txtSearchTerm_TextChanged" />
+                </StackPanel>
+            </Border>
         </DockPanel>
-        <Image Source="images/closebtn.png" Grid.Column="1" Margin="947,-2,-2,315" RenderTransformOrigin="-0.021,1.361"/>
+        <!-- <PasswordBox Margin="348,225,114,168" Grid.Column="1"/>-->
+        <DockPanel Margin="314,343,225,330" Grid.Column="1" Grid.RowSpan="2">
+            <Border CornerRadius="7"
+                Background="White"
+                BorderThickness="2"
+                Padding="8" Width="464" Height="75">
+                <StackPanel Orientation="Horizontal"
+                    DockPanel.Dock="Top" Margin="-8,-5,-6,-7">
+                    <Image Height="42" Source="images/login_pwd.png" Width="54"/>
+                    <TextBlock FontSize="25" Padding="0 0 8 0" Height="25"/>
+                    <!--<PasswordBox Width="282"  Height="88"/>-->
+                    <PasswordBox Width="383"  Height="39"/>
+                </StackPanel>
+            </Border>
+        </DockPanel>
     </Grid>
 </Window>

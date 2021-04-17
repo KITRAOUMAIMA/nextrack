@@ -54,5 +54,10 @@ namespace nextrack
         {
 
         }
+
+        private void txtSearchTerm_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

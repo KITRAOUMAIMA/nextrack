@@ -1,5 +1,5 @@
 ﻿nextrack
-1.0.0.0
+
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\NEXTRONIC\source\repos\nextrack\nextrack\App.xaml
-2-433835821
+11407045341
 
-6-2069434890
+3-1233169557
 192-1533232326
-MainWindow.xaml;VIEW\Window1.xaml;
+MainWindow.xaml;
 
-True
+False
 
